@@ -30,42 +30,23 @@ void displayAll();
 
 
 int main() {
-    int choice;
+    int choice = -1;
 
-    do {
-        cout << "\n1. Add Package\n2. Add Courier\n3. Dispatch\n4. Display All\n0. Exit\nChoice: ";
+    while (choice != 0) {
+        cout << "\n--- LOGISTICS MENU ---" << endl;
+        cout << "1. Add Package" << endl;
+        cout << "2. Add Courier" << endl;
+        cout << "3. Dispatch (Send)" << endl;
+        cout << "4. Show All" << endl;
+        cout << "0. Exit" << endl;
+        cout << "Choice: ";
         cin >> choice;
 
-        switch (choice) {
-            case 1: {
-                string id, city;
-                int l, w, h;
-                cout << "ID: "; cin >> id;
-                cout << "City: "; cin >> city;
-                cout << "Dimensions (l w h): "; cin >> l >> w >> h;
-                pushPackage(id, city, l, w, h);
-                break;
-            }
-            case 2: {
-                string name, vehicle;
-                cout << "Name: "; cin >> name;
-                cout << "Vehicle: "; cin >> vehicle;
-                enqueueCourier(name, vehicle);
-                break;
-            }
-            case 3:
-                dispatch();
-                break;
-            case 4:
-                displayAll();
-                break;
-            case 0:
-                cout << "bye!" << endl;
-                break;
-            default:
-                cout << "wrong choice" << endl;
-        }
-    } while (choice != 0);
+        if (choice == 1) ;
+        else if (choice == 2) ;
+        else if (choice == 3) ;
+        else if (choice == 4) ;
+    }
 
     return 0;
 }
