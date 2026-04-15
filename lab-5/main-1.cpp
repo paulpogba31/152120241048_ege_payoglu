@@ -60,18 +60,18 @@ void printQueue(Queue* q) {
 // ==========================================
 void reverseQueue(Queue* q) {
 
-    stack tempStack;
-    initStack(&tempStack);
+    stack s;
+    initStack(&s);
 
     while(!isQueueEmpty(q)){
 
         int value = dequeue(q);
-        push(&tempStack,value);
+        push(&s,value);
 
     }
-    while(!isStackEmpty(&tempStack)){
+    while(!isStackEmpty(&s)){
 
-        int value = pop(&tempStack);
+        int value = pop(&s);
         enqueue(q, value);
 
     }
